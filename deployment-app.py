@@ -61,7 +61,7 @@ def predict():
         print(input_array)
         print(input_array.dtype)
         
-        model = pickle.load(open('Decision Tree Classifier.pkl', 'rb'))
+        model = joblib.load(open('Decision Tree Classifier.gz', 'rb'))
         
         predictions = model.predict(input_array)[0]
         
